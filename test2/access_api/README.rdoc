@@ -1,0 +1,13 @@
+This Project is a basic example for exposing REST API and consuming it in rails, it doesn't include any user authenticastion while accessing api.
+
+verify_api:
+
+ This project will explaon only one route for it will take email as a parameter and result give whether user exists in db or if user exists is email verified or not with json.
+
+Apart it has normal route for creating email and verifying email but it not exposed.
+
+acess_api:
+
+It will access the above API with passing parmeter email and it replied with whether user exists or not and if user email exists check email verified or not.
+
+check api routes with "rake routes" 

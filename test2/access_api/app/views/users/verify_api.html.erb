@@ -1,0 +1,27 @@
+<style>
+img{
+	margin-bottom: -10px;
+}
+</style>
+<div style="width:600px;margin:auto;border:2px solid grey">
+<h2 style="margin-bottom:-5px;padding-left:25%;color:blue">Email Status</h2>
+<hr/>
+<p style="padding-left:10%">
+
+<% if  @response.has_key?("is_verified") %>
+   <% if @response["is_verified"] == true %>
+     <span>Email   : </span> <%= @email %> <span style="" > <%= image_tag("user.png",:width => "30px" )%></span> 
+     <br/><br/>
+     <span>Status :</span>
+     <%= @response["is_verified"] %>
+   <% else %>
+    <span>Email   : </span> <%= @email %> <span style="" > <%= image_tag("close.png",:width => "30px" )%></span> 
+     <br/><br/>
+     <span>Status :</span>
+     <%= @response["is_verified"] %>
+   <% end %>
+<%else %>
+<%= @response["Error"] %>
+<%end%>
+</p>
+</div>

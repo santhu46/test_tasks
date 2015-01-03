@@ -1,0 +1,6 @@
+<h1>Enter Email</h1>
+
+<%= form_tag "/users/verify_api",method: :get do %>
+  <%= text_field_tag "email" %>
+  <%= submit_tag "Verify" %>
+<% end %>
