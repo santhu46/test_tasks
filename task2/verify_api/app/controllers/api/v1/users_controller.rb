@@ -5,8 +5,6 @@ module Api
       #To know whether email verified or not
       def verify_email
         respond_to do |format|
-          p "**************"
-          p (params[:email] == "") || (params[:email].nil?)
         format.json { render :status => 200, json: { "Error" => "Email should not be nil"}} if(params[:email] == "") || (params[:email].nil?)
         @user = User.where(:email => params[:email]).first
         if @user.nil? 
